@@ -36,31 +36,14 @@ The `.gitlab-ci.yml` file defines two stages:
 
 3. Pull this repository to your local PC, chnage git remote origin to point to GitLab repository.
 
-5. Push any change to the repository's `main` branch. This will trigger the pipeline:
+4. Push any change to the repository's `main` branch. This will trigger the pipeline:
    - Stage 1: `build` — outputs a simple message, because it is simple static website, no need to be built
    - Stage 2: `deploy` — uploads files to `/usr/share/nginx/html` on the server
 
-6. After deployment, open the website in your browser:
+5. After deployment, open the website in your browser:
    ```
    http://34.235.192.193
    ```
-
----
-
-## 📁 Project Structure
-
-```
-.
-├── index.html
-├── styles.css
-├── js/
-│   └── script.js
-├── .gitlab-ci.yml
-├── docker-compose.yml
-└── README.md
-```
-
----
 
 ## 👨‍💻 Author
 
