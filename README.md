@@ -29,7 +29,7 @@ The `.gitlab-ci.yml` file defines two stages:
 
 ### ✅ Next Steps to Test the Project:
 
-1. 📬 **Contact the author** on Telegram to turn on the AWS EC2 instance, and I will provide you GitLab credentials:
+1. 📬 **Contact me** on Telegram to turn on the AWS EC2 instance, and I will provide you GitLab credentials:
    > **Telegram:** [@mos_7777](https://t.me/mos_7777)
 
 2. Once the server is up, GitLab and GitLab Runner will start automatically (via existing `docker-compose.yaml`)
