@@ -1,24 +1,24 @@
-# 🔧 GitLab CI/CD: Деплой статического сайта на EC2 через SSH
+# 🔧 GitLab CI/CD: Static Website Deployment to EC2 via SSH
 
-## 📌 Описание
+## 📌 Project Overview
 
-Данный проект демонстрирует настройку CI/CD пайплайна в GitLab для автоматического деплоя статического HTML/CSS/JS сайта на удалённый сервер (AWS EC2) через `scp`.
+This project demonstrates how to set up a CI/CD pipeline using GitLab and GitLab Runner (via Docker) to automatically deploy a static HTML/CSS/JS website to a remote AWS EC2 server using `scp`.
 
-В инфраструктуре используются:
-- **GitLab** и **GitLab Runner** в Docker
-- **GitLab CI/CD**
-- **Nginx** на сервере
-- **AWS EC2** как хост для продакшн-окружения
+### Technologies Used:
+- **GitLab CE** and **GitLab Runner** (Dockerized)
+- **GitLab CI/CD Pipelines**
+- **Nginx** to serve the static content
+- **AWS EC2** as the target server
 
 ---
 
-## 🚀 CI/CD пайплайн
+## 🚀 CI/CD Pipeline Overview
 
-Файл `.gitlab-ci.yml` содержит следующие этапы:
+The `.gitlab-ci.yml` file defines two stages:
 
-| Этап    | Описание                                        |
-|---------|-------------------------------------------------|
-| `build` | Псевдо-сборка — просто выводит информационное сообщение |
-| `deploy`| Копирует содержимое проекта на EC2 сервер в `/usr/share/nginx/html` |
+| Stage    | Description                                            |
+|----------|--------------------------------------------------------|
+| `build`  | Placeholder step that simply echoes a message          |
+| `deploy` | Copies all static site files to the remote server via SSH into `/usr/share/nginx/html` |
 
-> Пайплайн запускается при пуше в ветку `main`.
+> The pipeline is triggered on pushes to the `main` branch.
