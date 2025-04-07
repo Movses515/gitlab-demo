@@ -32,7 +32,7 @@ The `.gitlab-ci.yml` file defines two stages:
 1. 📬 **Contact me** on Telegram to turn on the AWS EC2 instance, and I will provide you GitLab credentials:
    > **Telegram:** [@mos_7777](https://t.me/mos_7777)
 
-2. Once the server is up, GitLab and GitLab Runner will start automatically (via existing `docker-compose.yaml`)
+2. Once the server is up, GitLab and GitLab Runner will start automatically (via existing `docker-compose.yaml`), not need to call **docker compose up** again
 
 3. Pull this repository to your local PC, chnage git remote origin to point to GitLab repository.
 
