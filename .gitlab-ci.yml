@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  NODE_ENV: production
+
+# Build Step
+build:
+  stage: build
+  image: node:20
+  script:
+    - echo "No real build step for static HTML site"
+  tags:
+    - devops-test
+
+# Deploy Step
+deploy:
+  stage: deploy
+  image: alpine
+  before_script:
+    - apk add --no-cache openssh
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts
+  script:
+    - scp -r * $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+  only:
+    - main
+  tags:
+    - devops-test
